@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Bellefair');
+
 {border:black 1px solid;}
 
-body{ _background:linear-gradient(skyblue 0%, black 30%, grey 180%);
-    font-size:7.5px;
+body{ background:linear-gradient(skyblue 0%, black 30%, grey 180%);
+    
+    font-size:6px;
     width:63em;
     height:90em;
     color:black;
@@ -35,7 +38,7 @@ body{ _background:linear-gradient(skyblue 0%, black 30%, grey 180%);
 /* top container contents */
 .pen_ink_container{
     display:grid;
-    grid-template-colums:45em 45em;
+    grid-template-columns:45em 45em;
     grid-template-areas:"ink-container pen-container";
     border:0px solid white;
 
@@ -46,6 +49,7 @@ body{ _background:linear-gradient(skyblue 0%, black 30%, grey 180%);
      height:12em;
     perspective: 800px;
     transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
 
 }
 .pen_container{
@@ -64,6 +68,7 @@ body{ _background:linear-gradient(skyblue 0%, black 30%, grey 180%);
     background-size:10em 10em;
     border: 0px solid red;
     transform: rotate3d(1, 0, 0, -10deg);
+    -webkit-transform: rotate3d(1, 0, 0, -10deg);
     
 }
 .pen{
@@ -75,6 +80,7 @@ body{ _background:linear-gradient(skyblue 0%, black 30%, grey 180%);
     background-repeat: no-repeat;
     border: 0px solid red;
     transform: rotate3d(1, 0, 0, 30deg);
+    -webkit-transform: rotate3d(1, 0, 0, 30deg);
     
 }
 
@@ -102,7 +108,7 @@ body{ _background:linear-gradient(skyblue 0%, black 30%, grey 180%);
     -webkit-transform: translate(5em, -5em)  rotate3d(1.9, 0, 0,39deg);
      border: 0em blue dotted;
    /* background-color: aliceblue;*/
-    background-image: url(images/note_pad_image.png);
+    background-image: url(images/note_pad_image_big.png);
     box-shadow: 3em 2em 5em 2em black;
     
 }
@@ -156,7 +162,7 @@ p{
        position:absolute;
        z-index:2;
        top: 23em;
-       Left:13em;
+       Left:16em;
        height:42em;
        width:35em;
        border:0px solid blue;
@@ -173,6 +179,11 @@ p{
        
 
 }
+/*pop menu text*/
+
+.menu_pop p {
+             padding-top:6em;font-family: 'Bellefair', serif;
+}
 .about_me{
 
      grid-area: "about-me";
@@ -184,7 +195,7 @@ p{
    
 }
 .skills{
-
+    font-family: 'Bellefair', serif;
      grid-area: "skills";
      border-bottom:1px solid red;
      border-left:1px solid red;
@@ -194,7 +205,8 @@ p{
      
 }
 .projects{
-
+    
+    font-family: 'Bellefair', serif;    
      grid-area: "projects";
      border-top:1px solid red;
      border-right:1px solid red;
@@ -203,7 +215,13 @@ p{
      background-color:;
      
 }
+.projects_text_container{
+            margin-left: 1.8em;
+            margin-top: 1.2em;
+        
+    }
 .contact_me{
+    font-family: 'Bellefair', serif;
      grid-area: "contact-me";
      border-top:1px solid red;
      border-left:1px solid red;
@@ -211,11 +229,7 @@ p{
      border-bottom-right-radius:20em;
      background-color:;
 }
-/*pop menu text*/
 
-.menu_pop p {
-             padding-top:6em;
-}
 
 /* page actual text or contents */
 
@@ -239,10 +253,13 @@ p{
 .about_me_text_container{
       height:42em;
       width:35em;
+        margin-left: 1.5em;
       border:0px solid blue;
       background-color: transparent;
       transform-origin:top;
+        -webkit-transform-origin:top;
       transform:rotate3d(1, 0, 0, 37deg);
+    -webkit-transform:rotate3d(1, 0, 0, 37deg);
        
       
 }
@@ -277,6 +294,7 @@ p{
        border:0px solid red;
 }
 .name p{
+        font-family: 'Bellefair', serif;
        font-size: 3em;
     
 }
@@ -295,9 +313,13 @@ p{
     
 }
 .full_intro{
-    width: 36em;
+    width: 30em;
     height: 10em;
-   transform:rotate3d(1, 0, 1, -10deg);
+    font-weight: 700;
+    color:firebrick;
+   transform:rotate3d(0, 0, 1, -10deg);
+    -webkit-transform:rotate3d(0, 0, 1, -10deg);
+   
 }
 
 
@@ -306,8 +328,8 @@ p{
 .skills_text{
       position:absolute;
       z-index:1;
-      top: 23em;
-      Left:13em;
+      top: 24em;
+      Left:17em;
       height:43em;
       width:37em;
       perspective: 1000px;
@@ -321,13 +343,15 @@ p{
       
 }
 .skills_text_container{
-      margin-left: 1em;
+      margin-left: 1.7em;
       height:42em;
       width:35em;
       border:0px solid blue;
       background-color: transparent;
       transform-origin:top;
-      transform:rotate3d(1, 0, 0, 37deg);
+    -webkit-transform-origin:top;
+      transform:rotate3d(1, 0, 0, 49deg);
+    -webkit-transform:rotate3d(1, 0, 0, 49deg);
     color:floralwhite;
     display:grid;
       
@@ -382,7 +406,7 @@ p{
       position:absolute;
       z-index:1;
       top: 23em;
-      Left:13em;
+      Left:16em;
       height:43em;
       width:37em;
       perspective: 1000px;
@@ -400,8 +424,15 @@ p{
       border:0px solid blue;
       background-color: transparent;
       transform-origin:top;
-      transform:rotate3d(1, 0, 0, 37deg);
+    -webkit-transform-origin:top;
+      transform:rotate3d(1, 0, 0, 49deg);
+    -webkit-transform:rotate3d(1, 0, 0, 49deg);
     display:grid;
+   
+}
+p a{
+     text-decoration: none;
+     color:darkblue;
 }
       
 
@@ -411,7 +442,7 @@ p{
 
 
 .contact_me_text{
-    margin-left: 0.6em;
+    margin-left: 5em;
     margin-top: 4em;
       position:absolute;
       z-index:1;
@@ -430,10 +461,13 @@ p{
 .contact_me_text_container{
       height:42em;
       width:30em;
+        margin-left: 0.2em;
       border:0px solid blue;
       background-color: transparent;
       transform-origin:top;
-      transform:rotate3d(1, 0, 0, 37deg);
+    -webkit-transform-origin:top;
+      transform:rotate3d(1, 0, 0, 40deg);
+    -webkit-transform:rotate3d(1, 0, 0, 40deg);
     display:grid;
 }
 .contact_me_text_container input{
@@ -442,37 +476,98 @@ p{
     
 }
 input::placeholder{
+    font-family: 'Bellefair', serif;
+    font-weight: 700;
     color:blue;
 }
 .submit{
+    
     color:yellow;
     border: 1px solid black;
 }
       
 /*--------------- break point ajusting fonts size -------------------*/
-@media all and (max-width: 991px) { body{font-size:14px ;} }
-@media all and (max-width: 768px) { body{font-size:8px ;} }
-@media all and (max-width: 480px) { 
-        body{font-size:6px ;}
+
+@media all and (max-width: 1440px) { 
+    body{font-size:9px ;}
+    .page{
+                transform: translate(10em, -5em)  rotate3d(1.9, 0, 0,39deg);
+                -webkit-transform: translate(10em, -5em)  rotate3d(1.9, 0, 0,39deg);
+    }
+    .skills_text_container{
+            margin-left: 3em;
+    }
+    .about_me_text_container{
+            margin-left: 5em;
+        
+        }
+    .projects_text_container{
+            margin-left: 3em;
+            margin-top: 3em;
+        
+    }
+    .contact_me_text_container{
+        margin-left: 2em;
+          
+    }
+    .contact_me_text{Left:12em;
     
+    }
+    
+    .menu_pop{
+        Left:18em;
+    }
+    
+    .menu p{
+            left:17.7em;
+    }
+    
+    
+
+    
+}
+
+@media screen and (max-width: 480px) { 
+        body{font-size:7.4px ;}
+    .page{
+                transform: translate(7em, -5em)  rotate3d(1.9, 0, 0,39deg);
+                -webkit-transform: translate(7em, -5em)  rotate3d(1.9, 0, 0,39deg);
+    }
     .skills_text_container{
             margin-left: 1.7em;
     }
     .about_me_text_container{
-            margin-left: 1.5em;
+            margin-left: 3em;
         
         }
     .projects_text_container{
-            margin-left: 1.8em;
-            margin-top: 1.2em;
+            margin-left: 1em;
+            margin-top: 1.7em;
         
     }
     .contact_me_text_container{
-        margin-left: 0.2em; 
-        
+        margin-left: 0.2em;
+          
+    }
+    .contact_me_text{Left:12em;
+    
+    }
+    
+    .menu_pop{
+        Left:16em;
     }
     
     .menu p{
-            left:23.5em;
+            left:17.7em;
     }
+    
     }
+
+@media screen and (max-width: 360px) {
+    body{font-size:6px;}
+        .projects_text_container{
+            margin-left: 2em; 
+        
+    }
+}
+ 
