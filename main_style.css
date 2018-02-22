@@ -1,0 +1,478 @@
+{border:black 1px solid;}
+
+body{ _background:linear-gradient(skyblue 0%, black 30%, grey 180%);
+    font-size:7.5px;
+    width:63em;
+    height:90em;
+    color:black;
+    display: grid;
+     grid-template-rows: 12em 30em 12em;
+    grid-template-areas: "main_top_bar"
+                        "main_middle_bar"
+                        "main_bottom_bar";
+                        
+
+
+}
+
+/* main body contents division */
+
+.top{
+    grid-area: "main_top_bar";    
+}
+
+.middle{
+     grid-area: "main_middle_bar"; 
+}
+
+.bottom{
+     
+     grid-area: "main_bottom_bar";
+}
+
+
+/*top */
+/* top container contents */
+.pen_ink_container{
+    display:grid;
+    grid-template-colums:45em 45em;
+    grid-template-areas:"ink-container pen-container";
+    border:0px solid white;
+
+}
+
+.ink_container{
+     grid-area:"ink-container";
+     height:12em;
+    perspective: 800px;
+    transform-style: preserve-3d;
+
+}
+.pen_container{
+
+      grid-area:"pen-container";
+      height:12em;
+}
+/*ink & pen contents*/
+.ink{
+    width:30em;
+    height:12em;
+    background-image: url(images/ink_bottle.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top:7.5em;
+    background-size:10em 10em;
+    border: 0px solid red;
+    transform: rotate3d(1, 0, 0, -10deg);
+    
+}
+.pen{
+    width:33em;
+    height:10em;
+    margin-top:8em;
+    background-image: url(images/ink_pen.png);
+    background-size: 33em 10em;
+    background-repeat: no-repeat;
+    border: 0px solid red;
+    transform: rotate3d(1, 0, 0, 30deg);
+    
+}
+
+
+
+
+/*middle container contents*/
+.page_container{
+    max-width: 100%;
+    height: 30em;
+    max-height: 30em;
+    border: 0em red dotted;
+    perspective: 1000px;
+    -webkit-perspective: 1000px;
+    transform-style:preserve-3d;
+    -webkit-transform-style:preserve-3d;
+    
+    
+}
+.page{
+    
+    height: 65em;
+    width: 45em;
+    transform: translate(5em, -5em)  rotate3d(1.9, 0, 0,39deg);
+    -webkit-transform: translate(5em, -5em)  rotate3d(1.9, 0, 0,39deg);
+     border: 0em blue dotted;
+   /* background-color: aliceblue;*/
+    background-image: url(images/note_pad_image.png);
+    box-shadow: 3em 2em 5em 2em black;
+    
+}
+p{
+    font-size: 2em;
+}
+/*page announce*/
+.announce{
+    width:5em;
+    height:1.2em;
+    background-color: black;
+    color: aliceblue;
+    
+}
+/* bottom */
+
+.menu{
+    border: 0px solid red;
+    width: 59em;
+    height:15em;
+    top: 67em;
+    position: absolute;
+    z-index: 1;
+    background-size: 40em 40em;
+    background-repeat:no-repeat;
+    background-position: right;
+    background-image: url(images/ink_spill.png);
+    
+}
+.menu p{
+    
+    font-size:2em;
+    text-align: right;
+    color:white;
+    position: absolute;
+    left:17.7em;
+    top:0.4em;
+    
+}
+
+
+/* features */
+
+.menu_pop_container{
+       width: 0em;
+       height:0em;
+       border: 0px solid red;
+
+}
+.menu_pop{
+       position:absolute;
+       z-index:2;
+       top: 23em;
+       Left:13em;
+       height:42em;
+       width:35em;
+       border:0px solid blue;
+       border-radius:30em;
+       background-color: transparent;
+       display:grid;
+       grid-template-columns: 17em 17em;
+       grid-template-rows: 21em 21em;
+       grid-template-areas:"about-me skills"
+                           "projects contact-me";
+       text-align: center;
+       
+       
+       
+
+}
+.about_me{
+
+     grid-area: "about-me";
+     border-bottom:1px solid red;
+     border-right:1px solid red;
+     border-bottom-right-radius:10em;
+     border-top-left-radius:20em;
+     background-color:;
+   
+}
+.skills{
+
+     grid-area: "skills";
+     border-bottom:1px solid red;
+     border-left:1px solid red;
+     border-bottom-left-radius:10em;
+     border-top-right-radius:20em;
+     background-color:;
+     
+}
+.projects{
+
+     grid-area: "projects";
+     border-top:1px solid red;
+     border-right:1px solid red;
+     border-top-right-radius:10em;
+     border-bottom-left-radius:20em;
+     background-color:;
+     
+}
+.contact_me{
+     grid-area: "contact-me";
+     border-top:1px solid red;
+     border-left:1px solid red;
+     border-top-left-radius:10em;
+     border-bottom-right-radius:20em;
+     background-color:;
+}
+/*pop menu text*/
+
+.menu_pop p {
+             padding-top:6em;
+}
+
+/* page actual text or contents */
+
+       /*about me*/
+.about_me_text{
+      position:absolute;
+      z-index:1;
+      top: 23em;
+      Left:13em;
+      height:43em;
+      width:37em;
+      perspective: 1000px;
+      -webkit-perspective: 1000px;
+      transform-style:preserve-3d;
+      -webkit-transform-style:preserve-3d;
+      border:0px solid blue;
+      background-color: transparent;
+      display:grid;
+      grid-template-columns: 17em;
+}
+.about_me_text_container{
+      height:42em;
+      width:35em;
+      border:0px solid blue;
+      background-color: transparent;
+      transform-origin:top;
+      transform:rotate3d(1, 0, 0, 37deg);
+       
+      
+}
+
+.about_me_text_contents{
+      height: 42em;
+      width:35em;
+      display:grid;
+      grid-template-columns: 17em 17em;
+      grid-template-rows:11em 11em 22em;
+      grid-template-areas:"self-image my-name"
+                          "my-surname my-surname"
+                          "my-intro my-intro";
+}
+.self_image{
+       grid-area:"self-image";
+       border:0px solid red;
+       
+
+}
+.self_image_pic{
+       width:17em;
+       height:22em;
+       background-image:url("images/mypic.jpg");
+       background-repeat:no-repeat;
+       background-size:17em 22em;
+       
+
+}
+.name{
+       grid-area:"my-name";
+       border:0px solid red;
+}
+.name p{
+       font-size: 3em;
+    
+}
+.surname{
+        grid-area: "my-surname";
+        border:0px solid red;
+
+}
+.intro{
+        grid-area:"my-intro";
+        border:0px solid red;
+}
+.intro p{
+       font-size: 3em;
+        font-weight: bolder;
+    
+}
+.full_intro{
+    width: 36em;
+    height: 10em;
+   transform:rotate3d(1, 0, 1, -10deg);
+}
+
+
+/*skills*/
+
+.skills_text{
+      position:absolute;
+      z-index:1;
+      top: 23em;
+      Left:13em;
+      height:43em;
+      width:37em;
+      perspective: 1000px;
+      -webkit-perspective: 1000px;
+      transform-style:preserve-3d;
+      -webkit-transform-style:preserve-3d;
+      border:0px solid blue;
+      background-color: transparent;
+      
+      
+      
+}
+.skills_text_container{
+      margin-left: 1em;
+      height:42em;
+      width:35em;
+      border:0px solid blue;
+      background-color: transparent;
+      transform-origin:top;
+      transform:rotate3d(1, 0, 0, 37deg);
+    color:floralwhite;
+    display:grid;
+      
+}
+.html{
+    
+    width:50% ;
+    height:2em ;
+    background-color:chocolate ;
+    border: 1px solid black;
+}
+.css{
+    width:30% ;
+    height:2em ;
+    background-color:darkslategray ;
+    border: 1px solid black;
+    
+}
+.jquery{
+    width:20% ;
+    height:2em ;
+    background-color:firebrick ;
+    border: 1px solid black;
+    
+}
+.pouchdb{
+    width:40% ;
+    height:2em;
+    background-color:burlywood;
+    border: 1px solid black;
+}
+.ux{
+    width:30% ;
+    height:2em ;
+    background-color:forestgreen;
+    border: 1px solid black;
+    
+}
+.js{
+    width:40% ;
+    height:2em ;
+    background-color:darkorange ;
+    border: 1px solid black;
+    
+}
+
+
+/*projects*/
+
+
+.projects_text{
+      position:absolute;
+      z-index:1;
+      top: 23em;
+      Left:13em;
+      height:43em;
+      width:37em;
+      perspective: 1000px;
+      -webkit-perspective: 1000px;
+      transform-style:preserve-3d;
+      -webkit-transform-style:preserve-3d;
+      border:0px solid blue;
+      background-color: transparent;
+      
+}
+.projects_text_container{
+      margin-left: 0.4em;
+      height:42em;
+      width:35em;
+      border:0px solid blue;
+      background-color: transparent;
+      transform-origin:top;
+      transform:rotate3d(1, 0, 0, 37deg);
+    display:grid;
+}
+      
+
+
+/*contact me*/
+
+
+
+.contact_me_text{
+    margin-left: 0.6em;
+    margin-top: 4em;
+      position:absolute;
+      z-index:1;
+      top: 23em;
+      Left:13em;
+      height:43em;
+      width:30em;
+      perspective: 1000px;
+      -webkit-perspective: 1000px;
+      transform-style:preserve-3d;
+      -webkit-transform-style:preserve-3d;
+      border:0px solid blue;
+      background-color: transparent;
+     
+}
+.contact_me_text_container{
+      height:42em;
+      width:30em;
+      border:0px solid blue;
+      background-color: transparent;
+      transform-origin:top;
+      transform:rotate3d(1, 0, 0, 37deg);
+    display:grid;
+}
+.contact_me_text_container input{
+    background-color: transparent;
+    border: 1px solid black;
+    
+}
+input::placeholder{
+    color:blue;
+}
+.submit{
+    color:yellow;
+    border: 1px solid black;
+}
+      
+/*--------------- break point ajusting fonts size -------------------*/
+@media all and (max-width: 991px) { body{font-size:14px ;} }
+@media all and (max-width: 768px) { body{font-size:8px ;} }
+@media all and (max-width: 480px) { 
+        body{font-size:6px ;}
+    
+    .skills_text_container{
+            margin-left: 1.7em;
+    }
+    .about_me_text_container{
+            margin-left: 1.5em;
+        
+        }
+    .projects_text_container{
+            margin-left: 1.8em;
+            margin-top: 1.2em;
+        
+    }
+    .contact_me_text_container{
+        margin-left: 0.2em; 
+        
+    }
+    
+    .menu p{
+            left:23.5em;
+    }
+    }
